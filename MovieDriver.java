@@ -2,31 +2,38 @@ package Lab1;
 
 import java.util.Scanner;
 
+// MovieDriver for Task1: Reads input for one movie and prints its info.
 public class MovieDriver {
-
-    public static void main(String[] args) {
-
-        Scanner keyboard = new Scanner(System.in);
-        // Creating a new movie object
-        Movie movie = new Movie();
-
-        System.out.println("Enter the name of a movie");
-        String title = keyboard.nextLine();
-        // Setting the title in the movie object
-        movie.setTitle(title);
-
-        System.out.println("Enter the rating of the movie");
-        String rating = keyboard.nextLine();
-        // Setting the rating in the movie object
-        movie.setRating(rating);
-
-        System.out.println("Enter the number of tickets sold for this movie");
-        int soldTickets = keyboard.nextInt();
-        // Setting the number of tickets sold in the movie object
-        movie.setSoldTickets(soldTickets);
-
-        keyboard.close();
-
-        System.out.println("Goodbye");
-    }
+	
+	public static void main(String[] args) {
+		// Create a Scanner object to read from the keyboard
+		Scanner keyboard = new Scanner(System.in);
+     
+		// Create a new Movie object (using the provided Movie.java class)
+		Movie movie = new Movie();
+     
+		// Prompt the user to enter the title of the movie
+		System.out.println("Enter the name of a movie");
+		String title = keyboard.nextLine();
+		movie.setTitle(title);
+     
+		// Prompt the user to enter the movie's rating
+		System.out.println("Enter the rating of the movie");
+		String rating = keyboard.nextLine();
+		movie.setRating(rating);
+     
+		// Prompt the user to enter the number of tickets sold
+		System.out.println("Enter the number of tickets sold for this movie");
+		int tickets = keyboard.nextInt();
+		movie.setSoldTickets(tickets);
+     
+		// Print out the movie information using the toString method
+		System.out.println(movie.toString());
+     
+		// Print the goodbye message
+		System.out.println("Goodbye");
+     
+		// Close the Scanner
+		keyboard.close();
+	}
 }
