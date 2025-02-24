@@ -27,9 +27,6 @@ public class MovieDriver {
 		int tickets = keyboard.nextInt();
 		movie.setSoldTickets(tickets);
      
-		// Print out the movie information using the toString method
-		System.out.println(movie.toString());
-     
 		// Print the goodbye message
 		System.out.println("Goodbye");
      
